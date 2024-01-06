@@ -8,15 +8,6 @@ from flask_login import LoginManager
 csrf = CSRFProtect() 
 db = SQLAlchemy()
 
-# loginManager를 인스턴스화 
-login_manager = LoginManager() 
-
-# 미로그인 시 리다이렉트하는 엔드포인트 지정 
-login_manager.login_view = "auth.signup"
-
-# 로그인 후에 표시할 메세지를 아무것도 표시하지 안도록 공백으로 지정   
-login_manager.login_message = ""
-
 def create_app(): 
     app = Flask(__name__)
 
