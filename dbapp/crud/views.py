@@ -1,4 +1,3 @@
-
 from flask import Blueprint, render_template
 from apps.crud.forms import UserForm
 from flask import Blueprint, render_template, redirect, url_for
@@ -51,7 +50,7 @@ def edit_user(user_id):
     form = UserForm()
 	
     #User 모델을 이용하여 사용자를 취득한다. 
-    user = User.query.filter_by(id = user_id).first() 
+    user = User.query.filter_by(id=user_id).first() 
 
     #form으로 부터 제출된 경우는 사용자를 갱신하여 사용자 조회 화면으로 리다이렉트한다. 
     if form.validate_on_submit(): 
